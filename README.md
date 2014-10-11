@@ -1,7 +1,7 @@
 MaterialTextField
 =====
 Backport of Android L's Text Field.
-Compatible with Android 3.0 (API 11) and above. It can be used on Android 2.X by using 
+Compatible with Android 3.0 (API 11) and above. It can be used on Android 2.X by using [NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids).
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=wwCHDJAcZFE
 " target="_blank"><img src="http://img.youtube.com/vi/wwCHDJAcZFE/0.jpg" 
