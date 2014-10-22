@@ -33,8 +33,15 @@ public class MaterialTextField extends EditText {
 		super(context, attrs);
 		
 		String theme_color_attr = attrs.getAttributeValue(null, "themeColor");
-		if (theme_color_attr != null) {
-			mThemeColor = Color.parseColor(theme_color_attr);
+		if (theme_color_attr != null && !isInEditMode()) {
+			if (theme_color_attr.startsWith("@color/")) {
+				int color_id = getResources().getIdentifier(
+						theme_color_attr.replace("@color/", ""),
+						"color", context.getPackageName());
+				mThemeColor = getResources().getColor(color_id);
+			} else {
+				mThemeColor = Color.parseColor(theme_color_attr);
+			}
 		}
 		String bar_anim_dur_attr = attrs.getAttributeValue(null, "barAnimDuration");
 		if (bar_anim_dur_attr != null) {
